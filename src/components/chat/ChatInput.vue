@@ -22,6 +22,16 @@
               </q-item-section>
             </q-item>
 
+            <q-item clickable v-close-popup @click="sendCardClicked">
+              <q-item-section avatar side>
+                <q-icon name="insert_emoticon" />
+              </q-item-section>
+              <q-item-section>
+                <!-- {{ $t('chatInput.attachImage') }} -->
+                Send adaptive card
+              </q-item-section>
+            </q-item>
+
             <!-- <q-item clickable>
               <q-item-section avatar>
                 <q-icon name="insert_emoticon" />
@@ -114,6 +124,7 @@ export default defineComponent({
     'sendMessage',
     'giveLotusClicked',
     'sendFileClicked',
+    'sendCardClicked'
   ],
   methods: {
     // ChatInput drop/paste handler
@@ -147,6 +158,9 @@ export default defineComponent({
     },
     sendFileClicked() {
       this.$emit('sendFileClicked')
+    },
+    sendCardClicked() {
+      this.$emit('sendCardClicked')
     },
     addEmoji(value: { id: string }) {
       // TODO: This needs to be cursor position aware

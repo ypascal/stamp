@@ -46,6 +46,7 @@
     <router-view
       @sendFileClicked="toSendFileDialog"
       @giveLotusClicked="sendMoneyOpen = true"
+      @sendCardClicked="toSendCardDialog"
     />
   </div>
 </template>
@@ -94,6 +95,11 @@ export default defineComponent({
     toSendFileDialog(args: unknown) {
       this.image = args
       this.sendFileOpen = true
+    },
+    toSendCardDialog(args: unknown) {
+      // this.image = args
+      // TODO add acrd dialog
+      this.sendCardOpen = true
     },
   },
   computed: {

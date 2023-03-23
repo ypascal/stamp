@@ -69,6 +69,7 @@
       </div>
       <!-- Message box -->
       <chat-input
+        @sendCardClicked="toSendCardDialog"
         @sendFileClicked="toSendFileDialog"
         @giveLotusClicked="$emit('giveLotusClicked')"
         ref="chatInput"
@@ -145,7 +146,7 @@ export default defineComponent({
       chatScroll: ref<QScrollArea | null>(null),
     }
   },
-  emits: ['giveLotusClicked', 'sendFileClicked'],
+  emits: ['giveLotusClicked', 'sendFileClicked', "sendCardDialog"],
   mounted() {
     this.scrollBottom()
     // set the chat width
@@ -164,6 +165,9 @@ export default defineComponent({
   methods: {
     toSendFileDialog(args: unknown) {
       this.$emit('sendFileClicked', args)
+    },
+    toSendCardDialog(args: unknown) {
+      this.$emit('sendCardDialog', args)
     },
     resizeHandler() {
       const chatScroll = this.chatScroll
