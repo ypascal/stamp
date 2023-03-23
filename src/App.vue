@@ -13,7 +13,6 @@
 
 <script lang="ts">
 import assert from 'assert'
-import axios from 'axios'
 
 import { defineComponent, ref, watch } from 'vue'
 import { QBtn } from 'quasar'
@@ -28,7 +27,6 @@ import { useAppearanceStore } from 'src/stores/appearance'
 import { useProfileStore } from 'src/stores/my-profile'
 import { useContactStore } from 'src/stores/contacts'
 import { useChatStore } from 'src/stores/chats'
-import { useTopicStore } from './stores/topics'
 import { openChat } from 'src/utils/routes'
 
 import ContactBookDialog from 'src/components/dialogs/ContactBookDialog.vue'
@@ -39,39 +37,6 @@ export default defineComponent({
     ContactBookDialog,
   },
   setup() {
-    /**
-     * Setup default localized topics
-     */
-    axios({
-      method: 'get',
-      url: 'https://json.geoiplookup.io/',
-      responseType: 'json',
-    }).then(response => {
-      if (response.status !== 200) {
-        return
-      }
-      const topicStore = useTopicStore()
-      const { country_code, region, district } = response.data
-      const topicParts = [country_code, region, district] as string[]
-      const topics = topicParts.reduce(
-        (topics, topicPart) => {
-          const lastTopic = topics.pop()
-          assert(lastTopic !== undefined, 'Should be world')
-          const normalizedTopicPart = topicPart
-            .trim()
-            .toLowerCase()
-            .replace(/\s/g, '-')
-          const joinedTopic = [lastTopic, normalizedTopicPart].join('.')
-          return [...topics, lastTopic, joinedTopic]
-        },
-        ['world'],
-      )
-      for (const topic of topics) {
-        topicStore.ensureTopic(topic)
-      }
-      console.log('topics', topics)
-    })
-
     // Setup chats, contacts, etc.
     const chatStore = useChatStore()
     const relayClient = useRelayClientStore()

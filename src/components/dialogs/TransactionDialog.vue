@@ -42,12 +42,7 @@
     </q-card-section>
 
     <q-card-actions align="right">
-      <q-btn
-        flat
-        :label="$t('transactionDialog.close')"
-        color="primary"
-        v-close-popup
-      />
+      <q-btn flat :label="$t('close')" color="primary" v-close-popup />
     </q-card-actions>
   </q-card>
 </template>
@@ -66,10 +61,6 @@ export default defineComponent({
     outpoints: {
       type: Object as PropType<Array<Utxo>>,
       default: () => [] as Utxo[],
-    },
-    txid: {
-      type: String,
-      required: true,
     },
   },
   data() {

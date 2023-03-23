@@ -17,23 +17,46 @@
     <q-card-actions align="right">
       <q-btn
         flat
-        :label="$t('seedPhraseDialog.close')"
+        icon="file_copy"
+        size="sm"
         color="primary"
-        v-close-popup
+        @click="copySeed"
       />
+      <q-btn flat :label="$t('close')" color="primary" v-close-popup />
     </q-card-actions>
   </q-card>
 </template>
 
 <script lang="ts">
+import { copyToClipboard, useQuasar } from 'quasar'
 import { useWalletStore } from 'src/stores/wallet'
 import { defineComponent, computed } from 'vue'
 
 export default defineComponent({
   setup() {
     const walletStore = useWalletStore()
+    const $q = useQuasar()
+    const copySeed = () => {
+      if (!walletStore.seedPhrase) {
+        return
+      }
+      copyToClipboard(walletStore.seedPhrase)
+        .then(() => {
+          $q.notify({
+            message:
+              '<div class="text-center"> Seed copied to clipboard </div>',
+            html: true,
+            color: 'purple',
+          })
+        })
+        .catch(() => {
+          // fail
+        })
+    }
+
     return {
       seedPhrase: computed(() => walletStore.seedPhrase),
+      copySeed,
     }
   },
   props: {

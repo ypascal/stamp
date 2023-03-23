@@ -2219,10 +2219,10 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==
 
-"@quasar/app-webpack@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@quasar/app-webpack/-/app-webpack-3.7.1.tgz#c2d9f826ac240894b033ab4c2364726101f5a216"
-  integrity sha512-gy77FP3PY/T2HDUa7cGU7oHKbdTmHUOLT4YBd/HvIsIHenjmZCaj/g+ero1kuoKRBy00Y5CalM5tDJnhO8PXOQ==
+"@quasar/app-webpack@^3.7.2":
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/@quasar/app-webpack/-/app-webpack-3.7.2.tgz#feaea083d79c5e6c62052dfe87a6e7df73d44e5e"
+  integrity sha512-OztjmlXaLqjBRm6YPV9/Q+WfXhdu9mcXk5OXExyEpzCII7dfa4m1UMzp+AOsgDXUgoSBt5Wg1WmAICLnKELAjw==
   dependencies:
     "@quasar/babel-preset-app" "2.0.2"
     "@quasar/fastclick" "1.1.5"
@@ -4313,16 +4313,15 @@ chromium-pickle-js@^0.2.0:
   resolved "https://registry.yarnpkg.com/chromium-pickle-js/-/chromium-pickle-js-0.2.0.tgz#04a106672c18b085ab774d983dfa3ea138f22205"
   integrity sha1-BKEGZywYsIWrd02YPfo+oTjyIgU=
 
-chronik-client@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/chronik-client/-/chronik-client-0.4.0.tgz#ff7c0527fca983d55ccc54b09ed6c1e9e049666d"
-  integrity sha512-VgxGHPYN3rlRcn7g1gEh562Tj/2dEDlXQnbhU3qQYgfFIRnBt80TP4Rq2raek7nUy+TIen0d4JK7zxoSK5Kauw==
+chronik-client@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/chronik-client/-/chronik-client-0.8.2.tgz#c6f56028dfc3c83255424bb9c721536f191fd41f"
+  integrity sha512-Icr4U3SFx7jRjBDea+FP4Lv2bq09iC5Kn2UKI9fMNas4vLZGDTtEgyS9d7QATC7DtLWt0QgmLGJbh04I8l5F6g==
   dependencies:
     "@types/ws" "^8.2.1"
     axios "^0.21.1"
     isomorphic-ws "^4.0.1"
-    long "^5.2.0"
-    protobufjs "^6.11.2"
+    protobufjs "^6.8.8"
     ws "^8.3.0"
 
 ci-info@3.7.1:
@@ -7756,11 +7755,6 @@ long@^4.0.0:
   resolved "https://registry.yarnpkg.com/long/-/long-4.0.0.tgz#9a7b71cfb7d361a194ea555241c92f7468d5bf28"
   integrity sha512-XsP+KhQif4bjX1kbuSiySJFNAehNxgLb6hPRGJ9QsUr8ajHkuXGdrHmFUTUUXhDwVX2R5bY4JNZEwbUiMhV+MA==
 
-long@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/long/-/long-5.2.0.tgz#2696dadf4b4da2ce3f6f6b89186085d94d52fd61"
-  integrity sha512-9RTUNjK60eJbx3uz+TEGF7fUr29ZDxR5QzXcyDpeSfeH28S9ycINflOgOlppit5U+4kNTe83KQnMEerw7GmE8w==
-
 lower-case@^1.1.1:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
@@ -8956,7 +8950,7 @@ proto-list@~1.2.1:
   resolved "https://registry.yarnpkg.com/proto-list/-/proto-list-1.2.4.tgz#212d5bfe1318306a420f6402b8e26ff39647a849"
   integrity sha1-IS1b/hMYMGpCD2QCuOJv85ZHqEk=
 
-protobufjs@^6.11.2:
+protobufjs@^6.8.8:
   version "6.11.3"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.3.tgz#637a527205a35caa4f3e2a9a4a13ddffe0e7af74"
   integrity sha512-xL96WDdCZYdU7Slin569tFX712BxsxslWwAfAhCYjQKGTq7dAU91Lomy6nLLhh/dyGhk/YH4TwTSRxTzhuHyZg==
@@ -9062,10 +9056,10 @@ qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
   integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
-quasar@^2.11.6:
-  version "2.11.6"
-  resolved "https://registry.yarnpkg.com/quasar/-/quasar-2.11.6.tgz#9d200a0de44dc235915fee3ea3ff5673045fdcbc"
-  integrity sha512-jJniWqTtfLHDuAT1YNx6ZZdZU7nM8vwscyM7IxmijaHq+fDpgjaujDQUlJWgn5ZMkqe3Yvg93MgSxjcL71oJIw==
+quasar@^2.11.7:
+  version "2.11.7"
+  resolved "https://registry.yarnpkg.com/quasar/-/quasar-2.11.7.tgz#0371d2cbe299305a0949332d2a3fc6929a70e2f6"
+  integrity sha512-OzDwYfoSwZbwqfNWz9Bfn1mhGE8YMxpTLhPvVkQU87ePF6qFj4aWttcTUifXITKldOAZziN1Mmv8VLQyITHwiw==
 
 querystring-es3@^0.2.1:
   version "0.2.1"

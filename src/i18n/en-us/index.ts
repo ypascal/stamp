@@ -107,10 +107,10 @@ export default {
     settings: 'Settings',
     wipeAndSave: 'Remote Wipe Wallet',
     changeLog: 'Changelog',
+    showSeed: 'Show Seed',
   },
   receiveBitcoinDialog: {
     walletStatus: 'Wallet Status',
-    showSeed: 'ShowSeed',
     close: 'Close',
     addressCopied: 'Address copied to clipboard',
   },
@@ -198,6 +198,6 @@ export default {
     txType: 'Type',
     txAddress: 'Address',
     txAmount: 'Amount',
-    close: 'Fermer',
   },
+  close: 'Close',
 }
