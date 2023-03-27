@@ -57,6 +57,7 @@ import { RouteLocationNormalized } from 'vue-router'
 
 import RightDrawer from '../components/panels/ChatRightDrawer.vue'
 import SendFileDialog from '../components/dialogs/SendFileDialog.vue'
+import SendChatDialog from '../components/dialogs/SendChatDialog.vue'
 import SendLotusDialog from '../components/dialogs/SendLotusDialog.vue'
 import { useContactStore } from 'src/stores/contacts'
 
@@ -66,6 +67,7 @@ export default defineComponent({
     RightDrawer,
     SendFileDialog,
     SendLotusDialog,
+    SendChatDialog,
   },
   setup() {
     const contactStore = useContactStore()
@@ -77,6 +79,7 @@ export default defineComponent({
   data() {
     return {
       sendFileOpen: false as boolean,
+      sendCardOpen: false as boolean,
       sendMoneyOpen: false as boolean,
       address: this.$route.params.address as string,
       contactDrawerOpen: false,
@@ -99,6 +102,7 @@ export default defineComponent({
     toSendCardDialog(args: unknown) {
       // this.image = args
       // TODO add acrd dialog
+      console.log('toSendCardDialog', args)
       this.sendCardOpen = true
     },
   },

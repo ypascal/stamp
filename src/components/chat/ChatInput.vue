@@ -27,8 +27,7 @@
                 <q-icon name="insert_emoticon" />
               </q-item-section>
               <q-item-section>
-                <!-- {{ $t('chatInput.attachImage') }} -->
-                Send adaptive card
+                Send adaptive card!
               </q-item-section>
             </q-item>
 
